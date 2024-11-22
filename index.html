@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta
+            name="Description"
+            content="Portfolio site of Louise Chan, a frontend developer who lives for food."
+    />
+    <title>Louise Chan — Frontend Developer</title>
+    <meta
+            property="og:title"
+            content="Louise Chan&#39;s Personal Website: louisecchan.github.io"
+    />
+    <meta
+            property="og:description"
+            content="Portfolio site of Louise Chan, a frontend developer who lives for food."
+    />
+    <meta property="og:type" content="website"/>
+    <!-- Favicon -->
+    <link
+            rel="icon shortcut"
+            type="x-icon"
+            sizes="64x64"
+            href="./assets/favicon_io/favicon.ico"
+    />
+    <link
+            rel="apple-touch-icon"
+            type="image/png"
+            sizes="57x57"
+            href="./assets/favicon_io/favicon-57x57.png"
+    />
+    <link rel="stylesheet" href="./files/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./files/style.css"/>
+    <link rel="stylesheet" href="./files/hover.css"/>
+
+    <!-- Copy Email to Clipboard -->
+    <script>
+        function copyToClipboard(element) {
+            navigator.clipboard
+                .writeText("hello@louc.dev")
+                .then(() => {
+                    document.getElementById(element).innerHTML = "Email Copied!";
+                    setTimeout(function () {
+                        document.getElementById(element).innerHTML = "Get in touch";
+                    }, 5000);
+                })
+                .catch(() => {
+                    alert("something went wrong");
+                });
+        }
+    </script>
+
+    <!-- Scroll-into-view: Reveal -->
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 10;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-0">
+            <section class="introduction">
+                <div class="typewriter">
+                    <h1 id="hello"></h1>
+                    <div class="text-fade-up">
+                        <h2>
+                            Your friendly
+                            <strong><a href="#projects">frontend developer</a></strong>
+                            <!-- and -->
+                            <!--                         <a href="./case-studies" target="_blank"-->
+                            <!--                         ><strong>designer</strong></a>-->
+                            <!-- <a href="#" target="_blank"
+                            ><strong>designer</strong></a> -->
+                            who lives for
+                            <strong>
+                                <a href="https://louc.cargo.site/" target="_blank"
+                                >food</a></strong>.
+                        </h2>
+                    </div>
+                </div>
+                <script>
+                    const phrases = [
+                        "Hey! I'm Lou.",
+                        "Salut, je m’appelle Lou.",
+                        "Hallo, ich bin Lou.",
+                        "Ciao, sono Lou.",
+                        "Hey! I'm Lou.",
+                    ];
+                    let currentPhraseIndex = 0;
+                    let i = 0;
+                    let speed = 90;
+
+                    function typeWriter() {
+                        const phrase = phrases[currentPhraseIndex];
+                        if (i < phrase.length) {
+                            document.getElementById("hello").innerHTML +=
+                                phrase.charAt(i);
+                            i++;
+                            setTimeout(typeWriter, speed);
+                        } else if (currentPhraseIndex < phrases.length - 1) {
+                            setTimeout(changePhrase, 1000);
+                        }
+                    }
+
+                    function changePhrase() {
+                        document.getElementById("hello").innerHTML = "";
+                        i = 0;
+                        currentPhraseIndex++;
+                        typeWriter();
+                    }
+
+                    typeWriter();
+                </script>
+
+                <div class="social">
+                    <p>
+                <span>
+                  <span>SOCIAL</span>
+                </span>
+                    </p>
+                    <a
+                            href="https://github.com/louisecchan"
+                            class="social"
+                            target="_blank"
+                    >
+                <span>
+                  <span>Github </span>
+                </span></a
+                    >
+                    <a
+                            href="https://www.linkedin.com/in/ch2hei"
+                            class="social"
+                            target="_blank"
+                    >
+                <span>
+                  <span>Linkedin</span>
+                </span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <section id="projects" class="projects">
+        <div class="row">
+            <h2 class="projects-title">Projects</h2>
+        </div>
+        <div class="row project">
+            <div class="project col-sm">
+                <div class="project-title-highlight"></div>
+                <h3>
+                    <a
+                            href="https://halfwayhk.netlify.app/"
+                            alt="Halfway Coffee"
+                            target="_blank"
+                            class="un"
+                    >Halfway Coffee</a
+                    >
+                </h3>
+                <p>
+                    A responsive website built for my favorite coffee shop
+                    in Hong Kong.
+                </p>
+                <p class="tech-stack">
+                    <span>WordPress</span>
+                    <span>MySQL</span>
+                    <span>CSS</span>
+                    <span>HTML</span>
+                </p>
+            </div>
+            <div class="project col-sm">
+                <div class="project-title-highlight"></div>
+                <h3>
+                    <a
+                            href="https://desiroo.up.railway.app"
+                            alt="Betterful"
+                            target="_blank"
+                            class="un"
+                    >Betterful</a
+                    >
+                </h3>
+                <p>
+                    An eCommerce application integrated with headless CMS and Stripe.
+                </p>
+                <p class="tech-stack">
+                    <span>React</span>
+                    <span>Strapi</span>
+                    <span>PostgreSQL</span>
+                    <span>SCSS</span>
+                </p>
+            </div>
+            <div class="project col-sm">
+                <div class="project-title-highlight"></div>
+                <h3>
+                    <a
+                            href="https://food852.up.railway.app/"
+                            alt="Meal Search App"
+                            target="_blank"
+                            class="un"
+                    >Food852</a
+                    >
+                </h3>
+                <p>
+                    A meal recipe application that allows users to add and save
+                    recipes.
+                </p>
+                <p class="tech-stack">
+                    <span>React</span>
+                    <span>Express</span>
+                    <span>MongoDB</span>
+                    <span>SCSS</span>
+                </p>
+            </div>
+        </div>
+        <div class="row reveal">
+            <div class="project col-sm">
+                <div class="project-title-highlight"></div>
+                <h3>
+                    <a
+                            href="https://redditcountdown.netlify.app/"
+                            alt="Cake Day Countdown"
+                            target="_blank"
+                            class="un"
+                    >Cake Day Countdown</a
+                    >
+                </h3>
+                <p>A real vanilla-ey minimalist countdown to Reddit Cake Day.</p>
+                <p class="tech-stack">
+                    <span>VanillaJS</span>
+                    <span>LESS</span>
+                    <span>CSS</span>
+                    <span>HTML</span>
+                </p>
+            </div>
+            <div class="project col-sm">
+                <div class="project-title-highlight"></div>
+                <h3>
+                    <a
+                            href="https://sanityoclock.netlify.app"
+                            alt="Meditation App"
+                            target="_blank"
+                            class="un"
+                    >Sanity O'Clock!</a
+                    >
+                </h3>
+                <p>A CSS Animation to help with focused breathing exercises.</p>
+                <p class="tech-stack">
+                    <span>JavaScript</span>
+                    <span>CSS</span>
+                    <span>HTML</span>
+                </p>
+            </div>
+            <div class="project col-sm">
+                <div class="project-title-highlight"></div>
+                <h3>
+                    <a
+                            href="https://substancepos.netlify.app/"
+                            alt="Central Perk"
+                            target="_blank"
+                            class="un"
+                    >Central Perk</a
+                    >
+                </h3>
+                <p>A React point-of-service application for coffee shops.</p>
+                <p class="tech-stack">
+                    <span>React</span>
+                    <span>CSS</span>
+                    <span>Bootstrap</span>
+                </p>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <ul>
+                    <li class="contact-text">
+                        Have a project in mind? Feel free to drop me a line.
+                    </li>
+                    <li class="footer-text">
+                        <a
+                                id="change-text"
+                                onclick="copyToClipboard(&#39;change-text&#39;)"
+                        >Get In Touch</a
+                        >
+                    </li>
+                    <li class="footer-text">
+                        LOUISE CHAN ©
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </section>
+</div>
+</body>
+</html>
