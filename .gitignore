@@ -1,0 +1,7 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore history and IDE files
+.history/
+.idea/
