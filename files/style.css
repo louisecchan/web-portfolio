@@ -4,6 +4,13 @@
     --primary-color: #111111;
     --flow-space: 1rem;
     --secondary-color: #363636;
+    
+}
+
+@media (max-width: 414px) {
+    body {
+        overflow-x: hidden;
+    }
 }
 
 /* Font Faces */
