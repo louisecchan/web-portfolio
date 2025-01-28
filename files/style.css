@@ -6,7 +6,7 @@
     --secondary-color: #363636;
 }
 
-@media (max-width: 414px) {
+@media (max-width: 520px) {
     body {
         box-sizing: border-box;
         overflow-x: hidden;
@@ -57,6 +57,7 @@ html {
 
 body {
     display: flex;
+    flex-wrap: wrap;
     height: 100%;
 }
 
