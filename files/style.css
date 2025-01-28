@@ -169,6 +169,7 @@ h2 {
 .tech-stack {
     font-weight: 500;
     display: flex;
+    flex-wrap: wrap;
     gap: 12px;
 }
 
