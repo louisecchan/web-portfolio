@@ -4,10 +4,12 @@
     --primary-color: #111111;
     --flow-space: 1rem;
     --secondary-color: #363636;
-    
 }
 
 @media (max-width: 414px) {
+    :root {
+        overflow-x: hidden;
+    }
     body {
         overflow-x: hidden;
     }
