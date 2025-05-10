@@ -28,3 +28,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }, stepTime);
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 250;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      }
+    }
+  }
+
+  // Initial check
+  reveal();
+
+  // Check on scroll
+  window.addEventListener("scroll", reveal);
+
+  // Check after a short delay to ensure all elements are rendered
+  setTimeout(reveal, 500);
+});
