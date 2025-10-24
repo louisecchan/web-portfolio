@@ -10,16 +10,14 @@
     />
 
     <title>Louise Chan — Frontend Developer</title>
-    
-    <meta
-      property="og:title"
-      content="Louise Chan&#39;s Personal Website: louisecchan.github.io"
-    />
+
+    <meta property="og:title" content="Louise Chan — Frontend Developer" />
     <meta
       property="og:description"
       content="Portfolio site of Louise Chan, a frontend developer who lives for food."
     />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://louc.dev" />
 
     <link
       rel="icon shortcut"
@@ -36,45 +34,7 @@
     <link rel="stylesheet" href="./files/bootstrap.min.css" />
     <link rel="stylesheet" href="./files/style.css" />
     <link rel="stylesheet" href="./files/hover.css" />
-
-    <script>
-      function copyToClipboard(element) {
-        navigator.clipboard
-          .writeText("hello@louc.dev")
-          .then(() => {
-            document.getElementById(element).innerHTML = "Email Copied!";
-            setTimeout(function () {
-              document.getElementById(element).innerHTML = "Get in touch";
-            }, 5000);
-          })
-          .catch(() => {
-            alert("something went wrong");
-          });
-      }
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("active");
-              }
-            });
-          },
-          {
-            threshold: 0.1,
-            rootMargin: "0px 0px -250px 0px",
-          }
-        );
-
-        // Observe all elements with the reveal class
-        document.querySelectorAll(".reveal").forEach((element) => {
-          observer.observe(element);
-        });
-      });
-    </script>
+    <script src="./files/main.js"></script>
   </head>
   <body>
     <div class="container">
@@ -96,39 +56,6 @@
                 </h2>
               </div>
             </div>
-            <script>
-              const phrases = [
-                "Hey! I'm Lou.",
-                "Salut, je m'appelle Lou.",
-                "Hallo, ich bin Lou.",
-                "Ciao, sono Lou.",
-                "Hey! I'm Lou.",
-              ];
-              let currentPhraseIndex = 0;
-              let i = 0;
-              let speed = 90;
-
-              function typeWriter() {
-                const phrase = phrases[currentPhraseIndex];
-                if (i < phrase.length) {
-                  document.getElementById("hello").innerHTML +=
-                    phrase.charAt(i);
-                  i++;
-                  setTimeout(typeWriter, speed);
-                } else if (currentPhraseIndex < phrases.length - 1) {
-                  setTimeout(changePhrase, 1000);
-                }
-              }
-
-              function changePhrase() {
-                document.getElementById("hello").innerHTML = "";
-                i = 0;
-                currentPhraseIndex++;
-                typeWriter();
-              }
-
-              typeWriter();
-            </script>
             <div class="social">
               <p>
                 <span>
@@ -299,10 +226,7 @@
                 >
               </li>
               <li class="footer-text">
-                LOUISE CHAN ©
-                <script>
-                  document.write(new Date().getFullYear());
-                </script>
+                LOUISE CHAN © <span id="current-year"></span>
               </li>
             </ul>
           </div>
