@@ -397,6 +397,16 @@ a:hover {
   .project {
     padding-right: 0 !important;
   }
+
+  .project h3 {
+    display: inline-block;
+    width: auto;
+  }
+
+  .project h3 .un {
+    max-width: 100%;
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 600px) {
