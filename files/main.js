@@ -146,38 +146,51 @@ function setupRevealObserver() {
 }
 
 // Typewriter effect
-const phrases = [
-  "Hey! I'm Lou.",
-  "Salut, je m'appelle Lou.",
-  "Hallo, ich bin Lou.",
-  "Ciao, sono Lou.",
-  "Hey! I'm Lou.",
-];
-let currentPhraseIndex = 0;
-let i = 0;
-let speed = 90;
+const typewriterConfig = {
+  elementId: "hello",
+  phrases: [
+    "Hey! I'm Lou.",
+    "Salut, je m'appelle Lou.",
+    "Hallo, ich bin Lou.",
+    "Ciao, sono Lou.",
+    "Hey! I'm Lou.",
+  ],
+  typeSpeed: 90,
+  phraseDelay: 1000,
+};
 
-function typeWriter() {
-  const phrase = phrases[currentPhraseIndex];
-  if (i < phrase.length) {
-    document.getElementById("hello").innerHTML += phrase.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  } else if (currentPhraseIndex < phrases.length - 1) {
-    setTimeout(changePhrase, 1000);
+function initTypewriter({ elementId, phrases, typeSpeed, phraseDelay }) {
+  const target = document.getElementById(elementId);
+  if (!target || !Array.isArray(phrases) || phrases.length === 0) {
+    return;
   }
-}
 
-function changePhrase() {
-  document.getElementById("hello").innerHTML = "";
-  i = 0;
-  currentPhraseIndex++;
-  typeWriter();
+  let phraseIndex = 0;
+  let characterIndex = 0;
+
+  function typeNextCharacter() {
+    const phrase = phrases[phraseIndex];
+    if (characterIndex < phrase.length) {
+      target.textContent += phrase.charAt(characterIndex);
+      characterIndex += 1;
+      setTimeout(typeNextCharacter, typeSpeed);
+    } else if (phraseIndex < phrases.length - 1) {
+      setTimeout(() => {
+        target.textContent = "";
+        phraseIndex += 1;
+        characterIndex = 0;
+        typeNextCharacter();
+      }, phraseDelay);
+    }
+  }
+
+  target.textContent = "";
+  typeNextCharacter();
 }
 
 // Start typewriter and set year when DOM is ready
 document.addEventListener("DOMContentLoaded", function () {
-  typeWriter();
+  initTypewriter(typewriterConfig);
   renderProjects();
   setupRevealObserver(); // Set up observer after projects are rendered
 
