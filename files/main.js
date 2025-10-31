@@ -31,7 +31,7 @@ const projectsData = [
     title: "Sanity O'Clock!",
     url: "https://sanityoclock.netlify.app",
     description:
-      "A meditation timer for boxed breathing — Wim Hof’s quieter cousin.",
+      "A meditation timer for box breathing — Wim Hof’s quieter cousin.",
     techStack: ["JavaScript", "CSS", "HTML"],
   },
   {
