@@ -22,7 +22,7 @@ const projectsData = [
     techStack: ["React", "Express", "MongoDB", "SCSS"],
   },
   {
-    title: "Cake Day Countdown",
+    title: "r/CakeDay",
     url: "https://redditcountdown.netlify.app/",
     description: "A real vanilla-ey minimalist countdown to Reddit Cake Day.",
     techStack: ["VanillaJS", "LESS", "CSS", "HTML"],

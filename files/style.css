@@ -136,7 +136,7 @@ h2 {
 }
 
 .project-title {
-  color: #000 !important;
+  color: #000;
   margin-top: 80px;
 }
 
@@ -160,7 +160,7 @@ h2 {
 }
 
 .contact-text li {
-  font-size: 0.3rem !important;
+  font-size: 0.3rem;
 }
 
 .social p {
@@ -186,13 +186,12 @@ h2 {
 .project {
   padding-top: 0.5rem;
   padding-bottom: 2.5rem;
-  /*padding-right: 2.5rem;*/
   padding-right: 2.35rem;
   margin-bottom: 0rem;
 }
 
 .has-text-centered {
-  text-align: center !important;
+  text-align: center;
 }
 
 /* Links */
@@ -210,6 +209,7 @@ h2 {
   background-image: linear-gradient(to right, #fedd00, #fedd00 50%, #000 50%);
   background-size: 200% 100%;
   background-position: -100%;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
@@ -278,14 +278,14 @@ a:hover {
   display: inline-block;
   padding-bottom: 1px;
   background-image: linear-gradient(#575656 0 0);
-  background-position: 0 100%; /*OR bottom left*/
+  background-position: 0 100%;
   background-size: 0% 0.5px;
   background-repeat: no-repeat;
-  transition: background-size 0.3s, background-position 0s 0.3s; /*change after the size immediately*/
+  transition: background-size 0.3s, background-position 0s 0.3s;
 }
 
 .un:hover {
-  background-position: 100% 100%; /*OR bottom right*/
+  background-position: 100% 100%;
   background-size: 100% 1px;
   text-decoration: none;
   color: #000000;
@@ -347,7 +347,7 @@ a:hover {
 
 @media (max-width: 1024px) {
   .col-0 {
-    flex: 0 0 65% !important;
+    flex: 0 0 65%;
   }
 
   .container {
@@ -366,26 +366,26 @@ a:hover {
     object-position: center;
     margin-top: -2rem;
     margin-bottom: 1rem;
-    padding-right: 1.3rem !important;
+    padding-right: 1.3rem;
   }
 
   .section-content-l,
   .research-goals-outline {
-    margin-right: 2rem !important;
+    margin-right: 2rem;
   }
 
   .col-2.section-content-r {
-    margin-right: 2rem !important;
+    margin-right: 2rem;
   }
 
   .row.project,
   .row.reveal {
-    margin-right: 0 !important;
-    gap: 0 !important;
+    margin-right: 0;
+    gap: 0;
   }
 
   .project {
-    padding-right: 0 !important;
+    padding-right: 0;
   }
 
   .project h3 {
@@ -408,53 +408,52 @@ a:hover {
 }
 
 @media screen and (max-width: 600px) {
-
   #projects-container {
     margin: 0 1.8rem;
   }
 
   #mySidenav {
-    display: none !important;
+    display: none;
   }
 
   /* modal */
   .close {
     color: #999;
     position: absolute;
-    top: 5px !important;
-    right: 80px !important;
+    top: 5px;
+    right: 80px;
     font-size: 35px;
   }
 
   /* page in general */
   #overview {
-    padding-left: 0.8rem !important;
+    padding-left: 0.8rem;
   }
 
   .section-content-r {
-    padding-left: 1.4rem !important;
-    height: 55vh !important;
+    padding-left: 1.4rem;
+    height: 55vh;
   }
 
   .col-random-2 {
-    padding-left: 1.5rem !important;
+    padding-left: 1.5rem;
   }
 
   .row {
-    padding-left: 1rem !important;
+    padding-left: 1rem;
   }
 
   .result-card-wrapper-1,
   .result-card-wrapper-2 {
-    width: 100vw !important;
+    width: 100vw;
   }
 
   .result-card-wrapper-2 {
-    margin-top: -1.8rem !important;
+    margin-top: -1.8rem;
   }
 
   .result-card {
-    width: 50vw !important;
+    width: 50vw;
   }
 
   /* Mobile menu */
@@ -463,35 +462,35 @@ a:hover {
     top: 2%;
     right: 4%;
     z-index: 2;
-    display: block !important;
-    color: #000 !important;
+    display: block;
+    color: #000;
   }
 
   .ux-nav-button-mobile {
-    display: block !important;
+    display: block;
   }
 
   .ux-nav-button-desktop {
-    display: none !important;
+    display: none;
   }
 
   .header-navigation {
-    justify-content: center !important;
+    justify-content: center;
     align-items: center;
     margin-bottom: 0;
-    padding-top: 2rem !important;
-    padding-left: 6.5rem !important;
+    padding-top: 2rem;
+    padding-left: 6.5rem;
   }
 
   .header-navigation.main {
-    text-align: center !important;
-    flex-direction: column !important;
+    text-align: center;
+    flex-direction: column;
     flex: none;
     order: 0;
     justify-content: space-between;
     align-self: auto;
-    align-items: center !important;
-    margin-right: 0rem !important;
+    align-items: center;
+    margin-right: 0rem;
   }
 
   .nav-item-wrapper a {
@@ -499,7 +498,7 @@ a:hover {
   }
 
   .split-content.header-center {
-    margin-top: 0rem !important;
+    margin-top: 0rem;
   }
 
   .overlay {
@@ -537,42 +536,42 @@ a:hover {
   }
 
   .overlay .closeBtn {
-    display: block !important;
-    position: absolute !important;
-    top: 0px !important;
-    right: 30px !important;
-    font-size: 60px !important;
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 30px;
+    font-size: 60px;
   }
 
   /* Other crap */
   #word-vomit,
   #takeaways-text {
-    color: #000 !important;
+    color: #000;
   }
 
   #takeaways-text {
-    max-width: 90vw !important;
+    max-width: 90vw;
   }
 
   .takeaways-text-wrapper {
-    margin-left: 2rem !important;
-    margin-right: 1.5rem !important;
-    margin-bottom: 4rem !important;
+    margin-left: 2rem;
+    margin-right: 1.5rem;
+    margin-bottom: 4rem;
   }
 
   .case-study-outline,
   .case-study-description,
   .research-goals-outline,
   .tagline {
-    color: #000 !important;
+    color: #000;
   }
 
   .tagline.dark {
-    color: #fff !important;
+    color: #fff;
   }
 
   .needfinding-content {
-    margin-bottom: 3rem !important;
+    margin-bottom: 3rem;
   }
 
   /* .needfinding-content.indented {
@@ -580,259 +579,255 @@ a:hover {
     } */
   .needfinding-content.bulletpoint.tagline.light,
   .interview-questions {
-    margin-left: 0rem !important;
+    margin-left: 0rem;
   }
 
   .needfinding-content.indented {
-    margin-left: 0rem !important;
+    margin-left: 0rem;
   }
 
   .grid {
-    margin-left: 2rem !important;
+    margin-left: 2rem;
   }
 
   .grid-cols-3 {
-    display: flex !important;
-    flex-wrap: wrap !important;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .result-card-wrapper-1,
   .result-card-wrapper-2 {
-    flex-wrap: wrap !important;
+    flex-wrap: wrap;
   }
 
   .result-card-wrapper-2 {
-    width: 65vw !important;
+    width: 65vw;
   }
 
   .affinity-map {
-    width: 85vw !important;
-    margin-left: 1rem !important;
+    width: 85vw;
+    margin-left: 1rem;
   }
 
   .affinity-map-2 {
-    width: 85vw !important;
-    margin-left: 1rem !important;
+    width: 85vw;
+    margin-left: 1rem;
   }
 
   .persona-pic {
-    margin-bottom: 4rem !important;
+    margin-bottom: 4rem;
   }
 
   .wireframe,
   .wireframe-2 {
-    width: 80vw !important;
-    margin-left: 2rem !important;
+    width: 80vw;
+    margin-left: 2rem;
   }
 
   .image1 {
-    width: 25% !important;
-    left: 70px !important;
-    top: 104px !important;
+    width: 25%;
+    left: 70px;
+    top: 104px;
   }
 
   .section-3,
   .section-5,
   .section-7,
   .section-9 {
-    padding-left: 1rem !important;
-    margin-right: 1rem !important;
+    padding-left: 1rem;
+    margin-right: 1rem;
   }
 
   .section-6,
   .section-8,
   .section-10 {
-    padding-left: 1rem !important;
+    padding-left: 1rem;
   }
 
   .needfinding-content.indented {
-    margin-left: 2rem !important;
+    margin-left: 2rem;
   }
 
   .col-random-1 {
-    flex: 63% !important;
-    /* margin-left: 0.9rem !important;
-        margin-right: 1.5rem !important; */
+    flex: 63%;
+    /* margin-left: 0.9rem;
+        margin-right: 1.5rem; */
   }
 
   .col-random-2 {
-    flex: 63% !important;
-    /* margin-left: 0.9rem !important; */
+    flex: 63%;
+    /* margin-left: 0.9rem; */
   }
 
   .col-0 {
-    flex: 0 0 93% !important;
+    flex: 0 0 93%;
   }
 
   .col-1.empty {
-    display: none !important;
+    display: none;
   }
 
   .col-2 {
-    flex: 100% !important;
+    flex: 100%;
   }
 
   .col-2.section-content-r {
-    margin-left: -1.5rem !important;
+    margin-left: -1.5rem;
   }
 
   .col-3 {
-    flex: 0 0 40% !important;
+    flex: 0 0 40%;
   }
 
   .col-4 {
-    flex: 0 0 40% !important;
+    flex: 0 0 40%;
   }
 
   .col-5 {
-    margin-top: -1rem !important;
-    margin-bottom: 2rem !important;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
   }
 
   .col-6 {
-    flex: 0 0 40% !important;
+    flex: 0 0 40%;
   }
 
   .col-7 {
-    flex: 0 0 45% !important;
+    flex: 0 0 45%;
   }
 
   .col-11 {
-    flex: 0 0 45% !important;
+    flex: 0 0 45%;
   }
 
   .col-12 {
-    flex: 0 0 45% !important;
+    flex: 0 0 45%;
   }
 
   .col-13 {
-    flex: 0 0 40% !important;
+    flex: 0 0 40%;
   }
 
   .col-14 {
-    flex: 0 0 40% !important;
+    flex: 0 0 40%;
   }
 
   .col-15 {
-    flex: 0 0 40% !important;
+    flex: 0 0 40%;
   }
 
   .col-16 {
-    flex: 0 0 40% !important;
+    flex: 0 0 40%;
   }
 
   .col-17 {
-    flex: 0 0 50% !important;
+    flex: 0 0 50%;
   }
 
   .col-18 {
-    flex: 0 0 40% !important;
+    flex: 0 0 40%;
   }
 
   .col-19 {
-    flex: 0 0 50% !important;
+    flex: 0 0 50%;
   }
 
   .numeric-text {
-    font-size: 3rem !important;
+    font-size: 3rem;
   }
 
   .numeric-text-3 {
-    font-size: 3rem !important;
-    margin-bottom: 0rem !important;
-    margin-right: 0.5rem !important;
+    font-size: 3rem;
+    margin-bottom: 0rem;
+    margin-right: 0.5rem;
   }
 
   .result-card-top {
-    margin-left: 0rem !important;
-  }
-
-  .result-card-top.dark-bg {
-    /* margin-left: 0.5rem !important; */
+    margin-left: 0rem;
   }
 
   .result-card-top-2 {
-    margin-top: 1rem !important;
-    margin-left: 0.8rem !important;
+    margin-top: 1rem;
+    margin-left: 0.8rem;
   }
 
   .result-card-top-3 {
-    margin-top: -0.5rem !important;
-    margin-left: -3.5rem !important;
+    margin-top: -0.5rem;
+    margin-left: -3.5rem;
   }
 
   .result-card-top-4 {
-    margin-top: -1rem !important;
-    margin-bottom: 3rem !important;
-    margin-left: 0rem !important;
-    padding-left: 1rem !important;
+    margin-top: -1rem;
+    margin-bottom: 3rem;
+    margin-left: 0rem;
+    padding-left: 1rem;
   }
 
   .result-card-top-5 {
-    margin-left: 0.5rem !important;
-    margin-right: 1rem !important;
+    margin-left: 0.5rem;
+    margin-right: 1rem;
   }
 
   .result-card-top-6 {
-    margin-left: 0.5rem !important;
-    margin-top: 0.1rem !important;
-    margin-bottom: 2rem !important;
+    margin-left: 0.5rem;
+    margin-top: 0.1rem;
+    margin-bottom: 2rem;
   }
 
   .result-card-top-7 {
-    margin-left: 1.2rem !important;
-    margin-top: 0.1rem !important;
-    margin-bottom: 2rem !important;
+    margin-left: 1.2rem;
+    margin-top: 0.1rem;
+    margin-bottom: 2rem;
   }
 
   .result-card-top-8 {
-    margin-left: 0.8rem !important;
+    margin-left: 0.8rem;
   }
 
   .result-card-wrapper-top {
-    margin-left: 1rem !important;
+    margin-left: 1rem;
   }
 
   .result-text.description-3 {
-    margin-top: 1.2rem !important;
-    margin-left: 0rem !important;
+    margin-top: 1.2rem;
+    margin-left: 0rem;
   }
 
   .description-4 {
-    margin-top: 1.8rem !important;
-    margin-left: 1rem !important;
+    margin-top: 1.8rem;
+    margin-left: 1rem;
   }
 
   .description-5 {
-    margin-left: 4.5rem !important;
+    margin-left: 4.5rem;
   }
 
   .result-text.tinder {
-    margin-top: 0rem !important;
-    padding-top: 0rem !important;
-    margin-bottom: 2rem !important;
+    margin-top: 0rem;
+    padding-top: 0rem;
+    margin-bottom: 2rem;
   }
 
   .section-content-l {
-    flex: 100% !important;
+    flex: 100%;
   }
 
   .tagline {
-    margin-left: 2rem !important;
+    margin-left: 2rem;
   }
 
   .row.project,
   .row.reveal {
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
   }
 
   .project {
-    padding: 0 !important;
-    margin: 0 !important;
-    width: 100% !important;
+    padding: 0;
+    margin: 0;
+    width: 100%;
   }
 }
 
@@ -854,25 +849,25 @@ a:hover {
   }
 
   h1 {
-    font-size: 2.4rem !important;
+    font-size: 2.4rem;
   }
 
   h2 {
-    font-size: 2.4rem !important;
+    font-size: 2.4rem;
     margin-bottom: 8rem;
   }
 
   h1,
   h2 {
-    color: #eae9e9 !important;
+    color: #eae9e9;
   }
 
   h2 a {
-    color: #eae9e9 !important;
+    color: #eae9e9;
   }
 
   h3 a {
-    color: #eae9e9 !important;
+    color: #eae9e9;
   }
 
   .social a {
@@ -884,12 +879,7 @@ a:hover {
   }
 
   #change-text {
-    background-image: linear-gradient(
-      to right,
-      #d3d3d3,
-      #d3d3d3 50%,
-      #fff 50%
-    ) !important;
+    background-image: linear-gradient(to right, #d3d3d3, #d3d3d3 50%, #fff 50%);
   }
 
   #projects-container {
@@ -897,37 +887,37 @@ a:hover {
   }
 
   .project {
-    padding-right: 1rem !important;
-    margin-bottom: 2.5rem !important;
+    padding-right: 1rem;
+    margin-bottom: 2.5rem;
   }
 
   .projects-title {
-    margin-bottom: 0.9rem !important;
+    margin-bottom: 0.9rem;
   }
 
   .row.project,
   .row.reveal {
-    padding-right: 0 !important;
-    margin-left: 1.75rem !important;
-    width: 87% !important;
+    padding-right: 0;
+    margin-left: 1.75rem;
+    width: 87%;
   }
 
   .project-title-highlight {
-    border-top: 1px solid #fff !important;
+    border-top: 1px solid #fff;
     padding-bottom: var(--flow-space);
   }
 
   .contact-text {
     margin: 0;
-    padding: 1.8rem !important;
+    padding: 1.8rem;
   }
 
   .footer-text {
-    font-size: 0.9rem !important;
-    margin-top: 2.5rem !important;
-    margin-left: 0.5rem !important;
-    margin-right: 0.5rem !important;
-    padding: 2.7rem !important;
-    font-weight: 500 !important;
+    font-size: 0.9rem;
+    margin-top: 2.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 2.7rem;
+    font-weight: 500;
   }
 }
