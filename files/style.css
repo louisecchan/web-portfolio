@@ -411,6 +411,11 @@ a:hover {
 }
 
 @media screen and (max-width: 600px) {
+
+  #projects-container {
+    margin: 0 1.8rem;
+  }
+
   #mySidenav {
     display: none !important;
   }
