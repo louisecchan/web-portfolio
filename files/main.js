@@ -23,7 +23,7 @@ const projectsData = [
   },
   {
     title: "r/CakeDay",
-    url: "https://redditcountdown.netlify.app/",
+    url: "https://rcakeday.netlify.app/",
     description: "A real vanilla-ey minimalist countdown to Reddit Cake Day.",
     techStack: ["VanillaJS", "LESS", "CSS", "HTML"],
   },
