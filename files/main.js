@@ -35,7 +35,7 @@ const projectsData = [
   },
   {
     title: "Central Perk",
-    url: "https://substancepos.netlify.app/",
+    url: "https://centralperky.netlify.app/",
     description: "A React point-of-service application for coffee shops.",
     techStack: ["React", "CSS", "Bootstrap"],
   },
