@@ -30,7 +30,8 @@ const projectsData = [
   {
     title: "Sanity O'Clock!",
     url: "https://sanityoclock.netlify.app",
-    description: "A CSS Animation to help with focused breathing exercises.",
+    description:
+      "A meditation timer for boxed breathing — Wim Hof’s quieter cousin.",
     techStack: ["JavaScript", "CSS", "HTML"],
   },
   {
