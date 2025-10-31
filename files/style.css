@@ -404,6 +404,7 @@ a:hover {
   }
 
   .project h3 .un {
+    display: inline-block;
     max-width: 100%;
     width: auto;
   }
@@ -833,6 +834,16 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 480px) {
+  #projects-container {
+    margin: 0 1.8rem;
+  }
+
+  .contact-text {
+    margin: 0 6.5rem;
+  }
+}
+
 @media screen and (max-width: 414px) {
   body {
     background-color: black;
@@ -879,6 +890,10 @@ a:hover {
     ) !important;
   }
 
+  #projects-container {
+    margin: 0;
+  }
+
   .project {
     padding-right: 1rem !important;
     margin-bottom: 2.5rem !important;
@@ -901,6 +916,7 @@ a:hover {
   }
 
   .contact-text {
+    margin: 0;
     padding: 1.8rem !important;
   }
 
