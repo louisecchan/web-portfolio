@@ -131,7 +131,6 @@ h2 {
 }
 
 .project-title-highlight {
-  border-top: 1px solid #000;
   padding-bottom: var(--flow-space);
 }
 
@@ -283,7 +282,7 @@ h2 {
   gap: 20px;
   padding-bottom: 0;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
-	padding-left: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
 }
 
 a {
@@ -954,7 +953,6 @@ a:hover {
   }
 
   .project-title-highlight {
-    border-top: 1px solid #fff !important;
     padding-bottom: var(--flow-space);
   }
 
