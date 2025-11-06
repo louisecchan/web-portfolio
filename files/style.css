@@ -184,7 +184,6 @@ h2 {
 }
 
 .project {
-  padding: 2rem;
   margin-bottom: 0rem;
   background-color: #000;
   color: #fff;
@@ -278,11 +277,13 @@ h2 {
 
 .row.project,
 .row.reveal {
+  background-color: #fff;
   padding-right: 0;
-  margin-right: -39px;
-  gap: 5px;
+
+  gap: 20px;
   padding-bottom: 0;
-  margin-bottom: -0.5rem;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+	padding-left: calc(var(--bs-gutter-x) * 0.5);
 }
 
 a {
