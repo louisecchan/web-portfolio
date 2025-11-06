@@ -131,6 +131,7 @@ h2 {
 }
 
 .project-title-highlight {
+  border-top: 1px solid #000;
   padding-bottom: var(--flow-space);
 }
 
@@ -227,7 +228,7 @@ h2 {
 }
 
 .project:hover h3 a.un:hover {
-  color: #db4c44 !important;
+  color: #fedd00 !important;
 }
 
 .has-text-centered {
@@ -438,6 +439,13 @@ a:hover {
     display: inline-block;
     max-width: 100%;
     width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .introduction,
+  .projects {
+    padding: 4.8rem 1.5rem 0rem 0.5rem;
   }
 }
 
@@ -953,6 +961,7 @@ a:hover {
   }
 
   .project-title-highlight {
+    border-top: 1px solid #fff !important;
     padding-bottom: var(--flow-space);
   }
 
