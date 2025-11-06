@@ -184,11 +184,52 @@ h2 {
 }
 
 .project {
-  padding-top: 0.5rem;
-  padding-bottom: 2.5rem;
-  /*padding-right: 2.5rem;*/
-  padding-right: 2.35rem;
+  padding: 2rem;
   margin-bottom: 0rem;
+  background-color: #000;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.5s ease;
+}
+
+.project::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #fff;
+  transition: height 0.5s ease;
+  z-index: 1;
+}
+
+.project:hover::before {
+  height: 100%;
+}
+
+.project > * {
+  position: relative;
+  z-index: 2;
+}
+
+.project:hover {
+  color: #000;
+}
+
+.project h3,
+.project h3 a,
+.project h3 a.un,
+.project h3 a.un:visited,
+.project p,
+.project .tech-stack span {
+  color: inherit !important;
+  transition: color 0.5s ease;
+}
+
+.project:hover h3 a.un:hover {
+  color: #fedd00 !important;
 }
 
 .has-text-centered {
@@ -408,7 +449,6 @@ a:hover {
 }
 
 @media screen and (max-width: 600px) {
-
   #projects-container {
     margin: 0 1.8rem;
   }
