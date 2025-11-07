@@ -314,6 +314,10 @@ a:hover {
   transition: 0.2s;
 }
 
+.social a:hover {
+  color: #2596be;
+}
+
 /* Underline Animation */
 .un {
   display: inline-block;
