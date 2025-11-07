@@ -454,19 +454,6 @@ a:hover {
   .row.reveal {
     padding-right: 0;
   }
-
-  @media (max-width: 576px) {
-    .projects {
-      padding: 4.8rem 0rem 0rem 0.5rem;
-    }
-  }
-}
-
-@media (max-width: 520px) {
-  body {
-    box-sizing: border-box;
-    overflow-x: hidden;
-  }
 }
 
 @media screen and (max-width: 600px) {
@@ -896,8 +883,25 @@ a:hover {
 }
 
 @media screen and (max-width: 576px) {
+  #projects-container {
+    margin: 0 1.1rem;
+  }
+
+  .row {
+    padding-left: 0.15rem !important;
+  }
+
   .project {
-    padding-left: 10px;
+    padding-left: 0;
+  }
+
+  .project > * {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .projects {
+    padding: 4.8rem 0rem 0rem 0;
   }
 
   .social a:hover {
@@ -905,13 +909,24 @@ a:hover {
   }
 }
 
+@media (max-width: 520px) {
+  body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+}
+
 @media screen and (max-width: 480px) {
   #projects-container {
-    margin: 0 1.8rem;
+    margin: 0 1.5rem;
   }
 
   .contact-text {
     margin: 0 6.5rem;
+  }
+
+  .row {
+    padding-left: 0.6rem !important;
   }
 
   .row.project {
@@ -922,6 +937,11 @@ a:hover {
     padding: 0 !important;
     margin: 0 !important;
     width: 100% !important;
+  }
+
+  .project > * {
+    padding-left: 15px;
+    padding-right: 5px;
   }
 }
 
@@ -977,7 +997,6 @@ a:hover {
 
   .project {
     padding-right: 1rem !important;
-    margin-bottom: 2.5rem !important;
   }
 
   .projects-title {
