@@ -459,16 +459,6 @@ a:hover {
   .container {
     max-width: 100%;
   }
-
-  /* Hide custom cursor on tablets and mobile */
-  .custom-cursor {
-    display: none !important;
-  }
-
-  .project,
-  .project a {
-    cursor: pointer !important;
-  }
 }
 
 @media (max-width: 810px) {
@@ -534,6 +524,16 @@ a:hover {
 
   #mySidenav {
     display: none !important;
+  }
+
+  /* Hide custom cursor on mobile devices */
+  .custom-cursor {
+    display: none !important;
+  }
+
+  .project,
+  .project a {
+    cursor: pointer !important;
   }
 
   /* modal */
