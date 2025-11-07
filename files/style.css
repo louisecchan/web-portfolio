@@ -51,6 +51,67 @@ body {
   padding: 0;
 }
 
+/* Custom Cursor */
+.custom-cursor {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(254, 221, 0, 0.9);
+  pointer-events: none;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s cubic-bezier(0.5, 0, 0.09, 1), opacity 0.3s ease;
+  opacity: 0;
+  mix-blend-mode: normal;
+}
+
+.custom-cursor.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.custom-cursor svg {
+  width: 60px;
+  height: 60px;
+  color: #111111;
+}
+
+/* Arrow line animation - grows from stem */
+.custom-cursor .arrow-line {
+  stroke-dasharray: 18.38;
+  stroke-dashoffset: 18.38;
+  transition: stroke-dashoffset 0.5s cubic-bezier(0.5, 0, 0.09, 1) 0.15s;
+}
+
+.custom-cursor.active .arrow-line {
+  stroke-dashoffset: 0;
+}
+
+/* Arrow head animation - fades in after line grows */
+.custom-cursor .arrow-head {
+  opacity: 0;
+  transform-origin: 38px 22px;
+  transform: scale(0);
+  transition: opacity 0.25s ease 0.4s, transform 0.25s cubic-bezier(0.5, 0, 0.09, 1) 0.4s;
+}
+
+.custom-cursor.active .arrow-head {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.project {
+  cursor: none;
+}
+
+.project a {
+  cursor: none;
+}
+
 html {
   scroll-behavior: smooth;
   height: 100%;
@@ -397,6 +458,16 @@ a:hover {
 
   .container {
     max-width: 100%;
+  }
+
+  /* Hide custom cursor on tablets and mobile */
+  .custom-cursor {
+    display: none !important;
+  }
+
+  .project,
+  .project a {
+    cursor: pointer !important;
   }
 }
 

@@ -191,11 +191,71 @@ function initTypewriter({ elementId, phrases, typeSpeed, phraseDelay }) {
   typeNextCharacter();
 }
 
+// Custom cursor functionality
+function initCustomCursor() {
+  const cursor = document.querySelector(".custom-cursor");
+  if (!cursor) return;
+
+  let mouseX = 0;
+  let mouseY = 0;
+  let cursorX = 0;
+  let cursorY = 0;
+
+  // Track mouse position
+  document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  // Smooth cursor movement with RAF
+  function animate() {
+    // Lerp (linear interpolation) for smooth following
+    const speed = 0.15;
+    cursorX += (mouseX - cursorX) * speed;
+    cursorY += (mouseY - cursorY) * speed;
+
+    cursor.style.left = cursorX + "px";
+    cursor.style.top = cursorY + "px";
+
+    requestAnimationFrame(animate);
+  }
+  animate();
+
+  // Show cursor on project hover
+  function setupProjectHover() {
+    const projectElements = document.querySelectorAll(".project");
+
+    projectElements.forEach((project) => {
+      project.addEventListener("mouseenter", () => {
+        cursor.classList.add("active");
+      });
+
+      project.addEventListener("mouseleave", () => {
+        cursor.classList.remove("active");
+      });
+    });
+  }
+
+  // Call setup after projects are rendered
+  setupProjectHover();
+
+  // Re-setup when new projects are added (if needed)
+  const observer = new MutationObserver(() => {
+    setupProjectHover();
+  });
+
+  const projectsContainer = document.getElementById("projects-container");
+  if (projectsContainer) {
+    observer.observe(projectsContainer, { childList: true, subtree: true });
+  }
+}
+
 // Start typewriter and set year when DOM is ready
 document.addEventListener("DOMContentLoaded", function () {
   initTypewriter(typewriterConfig);
   renderProjects();
   setupRevealObserver(); // Set up observer after projects are rendered
+  initCustomCursor(); // Initialize custom cursor
 
   // Display current year in footer
   const yearElement = document.getElementById("current-year");
