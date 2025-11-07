@@ -227,7 +227,7 @@ h2 {
 }
 
 .project:hover h3 a.un:hover {
-  color: #fedd00 !important;
+  color: #000 !important;
 }
 
 .has-text-centered {
@@ -312,6 +312,10 @@ a:hover {
   display: block;
   padding: 1px 0;
   transition: 0.2s;
+}
+
+.social a:hover {
+  color: #2596be;
 }
 
 /* Underline Animation */
@@ -886,10 +890,18 @@ a:hover {
     max-width: 100% !important;
   }
 
+  .social a:hover {
+    color: #2596be;
+  }
+}
+
+@media screen and (max-width: 576px) {
   .project {
-    padding: 0 !important;
-    margin: 0 !important;
-    width: 100% !important;
+    padding-left: 10px;
+  }
+
+  .social a:hover {
+    color: #2596be;
   }
 }
 
@@ -904,6 +916,12 @@ a:hover {
 
   .row.project {
     background-color: #000;
+  }
+
+  .project {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
   }
 }
 
