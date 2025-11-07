@@ -74,6 +74,13 @@ body {
   opacity: 1;
 }
 
+/* Bubble pop effect when leaving project */
+.custom-cursor.bubble-pop {
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
 .custom-cursor svg {
   width: 60px;
   height: 60px;
@@ -102,6 +109,18 @@ body {
 .custom-cursor.active .arrow-head {
   opacity: 1;
   transform: scale(1);
+}
+
+/* Arrow animations for bubble pop effect */
+.custom-cursor.bubble-pop .arrow-line {
+  stroke-dashoffset: 18.38;
+  transition: stroke-dashoffset 0.2s ease;
+}
+
+.custom-cursor.bubble-pop .arrow-head {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.15s ease, transform 0.15s ease;
 }
 
 .project {

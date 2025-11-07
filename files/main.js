@@ -227,11 +227,18 @@ function initCustomCursor() {
 
     projectElements.forEach((project) => {
       project.addEventListener("mouseenter", () => {
+        cursor.classList.remove("bubble-pop");
         cursor.classList.add("active");
       });
 
       project.addEventListener("mouseleave", () => {
+        cursor.classList.add("bubble-pop");
         cursor.classList.remove("active");
+        
+        // Remove bubble-pop class after animation completes
+        setTimeout(() => {
+          cursor.classList.remove("bubble-pop");
+        }, 300);
       });
     });
   }
