@@ -48,7 +48,20 @@ const projectsData = [
 function createProjectCard(project) {
   const projectDiv = document.createElement("div");
   projectDiv.className = "project col-sm";
-  projectDiv.setAttribute("data-title", project.title);
+  
+  // Store the project URL and make the entire card clickable
+  projectDiv.dataset.url = project.url;
+  projectDiv.dataset.title = project.title;
+  
+  // Add click handler to the entire project card
+  projectDiv.addEventListener("click", (e) => {
+    // Prevent default if clicking on the link itself
+    e.preventDefault();
+    window.open(project.url, "_blank");
+  });
+  
+  // Add cursor pointer style
+  projectDiv.style.cursor = "none";
 
   const highlight = document.createElement("div");
   highlight.className = "project-title-highlight";
