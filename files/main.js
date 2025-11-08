@@ -48,6 +48,7 @@ const projectsData = [
 function createProjectCard(project) {
   const projectDiv = document.createElement("div");
   projectDiv.className = "project col-sm";
+  projectDiv.setAttribute("data-title", project.title);
 
   const highlight = document.createElement("div");
   highlight.className = "project-title-highlight";
