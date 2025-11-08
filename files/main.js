@@ -1,11 +1,11 @@
 // Project data structure
 const projectsData = [
   {
-    title: "Halfway Coffee",
-    url: "https://halfway.love",
+    title: "Hypebeast",
+    url: "https://hypebeast.com/advertise",
     description:
-      "A responsive website built for my favorite coffee shop in Hong Kong.",
-    techStack: ["WordPress", "MySQL", "CSS", "HTML"],
+      "From revamping advertising landing page to building custom Gutenberg blocks.",
+    techStack: ["PHP", "Vue.js", "Vite", "WordPress"],
   },
   {
     title: "Betterful",
@@ -48,18 +48,18 @@ const projectsData = [
 function createProjectCard(project) {
   const projectDiv = document.createElement("div");
   projectDiv.className = "project col-sm";
-  
+
   // Store the project URL and make the entire card clickable
   projectDiv.dataset.url = project.url;
   projectDiv.dataset.title = project.title;
-  
+
   // Add click handler to the entire project card
   projectDiv.addEventListener("click", (e) => {
     // Prevent default if clicking on the link itself
     e.preventDefault();
     window.open(project.url, "_blank");
   });
-  
+
   // Add cursor pointer style
   projectDiv.style.cursor = "none";
 
