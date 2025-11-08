@@ -316,11 +316,13 @@ h2 {
 }
 
 @keyframes slideRightToLeft {
-  from {
+  0% {
     transform: translateX(0);
+    -webkit-transform: translate3d(0, 0, 0);
   }
-  to {
+  100% {
     transform: translateX(-50%);
+    -webkit-transform: translate3d(-50%, 0, 0);
   }
 }
 
@@ -340,19 +342,38 @@ h2 {
   font-family: sanfrancisco, sans-serif;
   z-index: 3;
   white-space: nowrap;
-  will-change: transform;
   animation: none;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .project.col-sm:hover::after {
   opacity: 1;
-  transform: translate(0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
   transition-delay: 0.8s;
   animation: slideRightToLeft 4s linear 0.6s infinite;
+  -webkit-animation: slideRightToLeft 4s linear 0.6s infinite;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 }
 
 .project:hover h3 a.un:hover {
   color: #000 !important;
+}
+
+/* Disable scrolling animation on Safari */
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .project.col-sm:hover::after {
+      animation: none !important;
+      -webkit-animation: none !important;
+    }
+  }
 }
 
 .has-text-centered {
