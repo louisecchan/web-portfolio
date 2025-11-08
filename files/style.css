@@ -58,6 +58,7 @@ body {
   height: 80px;
   border-radius: 50%;
   background-color: rgba(254, 221, 0, 0.9);
+  border: 1px solid black;
   pointer-events: none;
   z-index: 9999;
   display: flex;
