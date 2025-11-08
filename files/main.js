@@ -115,7 +115,7 @@ function renderProjects() {
 // Copy email to clipboard function
 function copyToClipboard(element) {
   navigator.clipboard
-    .writeText("hello@louc.dev")
+    .writeText("louisecch@gmail.com")
     .then(() => {
       document.getElementById(element).innerHTML = "Email Copied!";
       setTimeout(function () {
@@ -235,7 +235,7 @@ function initCustomCursor() {
       project.addEventListener("mouseleave", () => {
         cursor.classList.add("bubble-pop");
         cursor.classList.remove("active");
-        
+
         // Remove bubble-pop class after animation completes
         setTimeout(() => {
           cursor.classList.remove("bubble-pop");
