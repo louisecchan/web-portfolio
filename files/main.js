@@ -15,6 +15,13 @@ const projectsData = [
     techStack: ["React", "Strapi", "PostgreSQL", "SCSS"],
   },
   {
+    title: "Central Perk",
+    url: "https://centralperky.netlify.app/",
+    description:
+      "A point-of-sale app for coffee shops that lets you take orders and print receipts.",
+    techStack: ["React", "CSS", "Bootstrap"],
+  },
+  {
     title: "Food852",
     url: "https://recipe-app-copy.onrender.com/",
     description:
@@ -32,15 +39,8 @@ const projectsData = [
     title: "Sanity O'Clock!",
     url: "https://sanityoclock.netlify.app",
     description:
-      "A meditation timer for box breathing — Wim Hof’s quieter cousin.",
+      "A meditation timer for box breathing — Wim Hof's quieter cousin.",
     techStack: ["JavaScript", "CSS", "HTML"],
-  },
-  {
-    title: "Central Perk",
-    url: "https://centralperky.netlify.app/",
-    description:
-      "A point-of-sale app for coffee shops that lets you take orders and print receipts.",
-    techStack: ["React", "CSS", "Bootstrap"],
   },
 ];
 
